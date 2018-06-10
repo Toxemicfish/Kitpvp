@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Kitpvp:jar">
+    <output-path>$USER_HOME$/Desktop/Artifacts</output-path>
+    <root id="archive" name="Kitpvp.jar">
+      <element id="module-output" name="Kitpvp" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../Minecraft/Plugins/Server Builds/spigot-1.8.8.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

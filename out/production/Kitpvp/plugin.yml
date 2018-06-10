@@ -1,0 +1,4 @@
+name: Kitpvp
+version: 1.0
+main: me.toxemicfish.kitpvp.Main
+commands:
