@@ -5,7 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
-public class messageManager {
+public class chatManager {
 
     private static String prefix = "§7[§eKitpvp§6] §f";
     private static String warn = "§7[§c!§7] §f";
