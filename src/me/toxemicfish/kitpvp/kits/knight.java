@@ -1,6 +1,7 @@
 package me.toxemicfish.kitpvp.kits;
 
 import me.toxemicfish.kitpvp.Main;
+
 import me.toxemicfish.kitpvp.utils.chatManager;
 import me.toxemicfish.kitpvp.utils.itemStackBuilder;
 import me.toxemicfish.kitpvp.utils.potionStackBuilder;
@@ -90,15 +91,14 @@ public class knight {
     }
 
     // Function to give a player a kit
+    // Function to give a player a kit
     public void giveKit(Player player) {
-        if (!plugin.kitActive.containsKey(player.getUniqueId()) && !plugin.kitActive.containsValue(kitName)){
-            kit(player, "&a" + kitName + " &aKit is now active!");
-            isActive = true;
-            plugin.kitActive.put(player.getUniqueId(), kitName);
+        if (plugin.kitActive.contains(player.getUniqueId())) {
+            player.sendMessage(chatManager.color("&aYou already have a kit active!"));
             return;
-        } else{
-            player.sendMessage(chatManager.color("&cYou already have a kit active &7-- &cPlease use /kitreset to reset your kit."));
         }
+        kit(player, "&a" + kitName + " &aKit is now active!");
+        plugin.kitActive.add(player.getUniqueId());
     }
 
     public String getKitName() {

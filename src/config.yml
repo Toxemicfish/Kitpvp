@@ -1,0 +1,10 @@
+sql:
+  host: 'localhost'
+  port: 3306
+  database: 'database'
+  username: 'root'
+  password: 'password'
+  tabel: 'table'
+default:
+  coins: 100
+  rank: 'Pleb'

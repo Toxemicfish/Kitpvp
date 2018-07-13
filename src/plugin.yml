@@ -4,3 +4,4 @@ main: me.toxemicfish.kitpvp.Main
 commands:
   kit:
   kitreset:
+  coins:

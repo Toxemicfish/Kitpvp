@@ -1,7 +1,6 @@
 package me.toxemicfish.kitpvp.commands;
 
 import me.toxemicfish.kitpvp.Main;
-import me.toxemicfish.kitpvp.kits.knight;
 import me.toxemicfish.kitpvp.utils.chatManager;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -27,14 +26,13 @@ public class setKit implements CommandExecutor{
 
             if(args[0].equalsIgnoreCase("knight")) {
                 plugin.getKitKnight().giveKit(p);
-                //plugin.getKitKnight().kit(p, "&aKit knight active.");
                 return true;
             } else if(args[0].equalsIgnoreCase("archer")) {
                 plugin.getKitArcher().giveKit(p);
                 return true;
             }
             else {
-                p.sendMessage(chatManager.color("&aSilly that is not a kit! (:"));
+                p.sendMessage(chatManager.color("&aSilly that is not a kit!"));
             }
 
         } else {

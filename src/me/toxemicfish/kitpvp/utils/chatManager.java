@@ -15,7 +15,7 @@ public class chatManager {
     }
 
     public static void goodConsole(String message) {
-        Bukkit.getServer().getConsoleSender().sendMessage(prefix + ChatColor.GREEN + message);
+        Bukkit.getServer().getConsoleSender().sendMessage(prefix + ChatColor.GREEN + " ✔ " + message);
     }
 
     public static void badConsole(String message) {

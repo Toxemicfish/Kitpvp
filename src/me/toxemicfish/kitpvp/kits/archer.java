@@ -8,8 +8,6 @@ import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionType;
 
 public class archer {
@@ -90,16 +88,15 @@ public class archer {
         player.sendMessage(chatManager.color(activeMessage));
     }
 
+
     // Function to give a player a kit
     public void giveKit(Player player) {
-        if (!plugin.kitActive.containsKey(player.getUniqueId()) && !plugin.kitActive.containsValue(kitName)) {
-            kit(player, "&a" + kitName + " &aKit is now active!");
-            isActive = true;
-            plugin.kitActive.put(player.getUniqueId(), kitName);
+        if (plugin.kitActive.contains(player.getUniqueId())) {
+            player.sendMessage(chatManager.color("&aYou already have a kit active!"));
             return;
-        } else {
-            player.sendMessage(chatManager.color("&cYou already have a kit active &7-- &cPlease use /kitreset to reset your kit."));
         }
+        kit(player, "&a" + kitName + " &aKit is now active!");
+        plugin.kitActive.add(player.getUniqueId());
     }
 
     public String getKitName() {
